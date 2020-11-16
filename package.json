@@ -50,5 +50,8 @@
   },
   "devDependencies": {
     "jasmine": "^2.99.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1"
   }
 }
