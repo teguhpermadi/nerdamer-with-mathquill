@@ -28,6 +28,7 @@
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
     integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
+    
 
   <!-- fontawesome -->
   <link href="node_modules/@fortawesome/fontawesome-free/css/fontawesome.css" rel="stylesheet">
@@ -39,77 +40,115 @@
   <div class="container-fluid">
     <!-- Content here -->
     <h1>Aplikasi Mathquill dan Nerdamer</h1>
-
-    <ul class="nav nav-tabs" role="tablist">
+    
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item">
-        <a class="nav-link active" href="#id1" role="tab" data-toggle="tab">Basic</a>
+        <a class="nav-link active" id="basic-tab" data-toggle="tab" href="#basic" role="tab" aria-controls="home"
+          aria-selected="true">Basic</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#id2" role="tab" data-toggle="tab">$$\alpha\beta\gamma$$</a>
+        <a class="nav-link" id="greek-small-tab" data-toggle="tab" href="#greek-small" role="tab"
+          aria-controls="profile" aria-selected="false">\(\alpha\beta\gamma\)</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#3" role="tab" data-toggle="tab">$$\mathrm{AB\Gamma}$$</a>
+        <a class="nav-link" id="greek-large-tab" data-toggle="tab" href="#greek-large" role="tab"
+          aria-controls="contact" aria-selected="false">\(\mathrm{AB\Gamma}\)</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#4" role="tab" data-toggle="tab">Trigonometry</a>
+        <a class="nav-link" id="trigonometry-tab" data-toggle="tab" href="#trigonometry" role="tab"
+          aria-controls="contact" aria-selected="false">\(\sin \cos \tan\)</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#5" role="tab" data-toggle="tab">$$\ge\div\rightarrow$$</a>
+        <a class="nav-link" id="operators-tab" data-toggle="tab" href="#operators" role="tab" aria-controls="contact"
+          aria-selected="false">\(\ge\div\rightarrow\)</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#6" role="tab" data-toggle="tab">$$\overline{x}\space\mathbb{C}\forall$$</a>
+        <a class="nav-link" id="accents-tab" data-toggle="tab" href="#accents" role="tab" aria-controls="contact"
+          aria-selected="false">\(\overline{x}\space\mathbb{C}\forall\)</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#7" role="tab" data-toggle="tab">$$\sum\space\int\space\prod$$</a>
+        <a class="nav-link" id="big-operators-tab" data-toggle="tab" href="#big-operators" role="tab"
+          aria-controls="contact" aria-selected="false">\(\sum\space\int\space\prod\)</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#8" role="tab" data-toggle="tab">$$\begin{pmatrix}\square&\square\\
-          \square&\square\end{pmatrix}$$</a>
+        <a class="nav-link" id="matrices-vectors-tab" data-toggle="tab" href="#matrices-vectors" role="tab"
+          aria-controls="contact" aria-selected="false">\(\tiny{\begin{pmatrix}\square&\square\\
+          \square&\square\end{pmatrix}}\)</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#9" role="tab" data-toggle="tab"><i class="fas fa-calculator"></i></a>
+        <a class="nav-link" id="calculator-tab" data-toggle="tab" href="#calculator" role="tab" aria-controls="contact"
+          aria-selected="false"><i class="fas fa-calculator"></i></a></a>
       </li>
     </ul>
-    
-    <!-- Tab panes -->
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane fade in active" id="id1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit beatae in consequuntur similique quae culpa ab suscipit commodi doloremque accusantium excepturi animi, iusto eum natus aut corrupti sunt nesciunt.</div>
-      <div role="tabpanel" class="tab-pane fade" id="id2"></div>
-      <div role="tabpanel" class="tab-pane fade" id="3"></div>
-      <div role="tabpanel" class="tab-pane fade" id="4"></div>
-      <div role="tabpanel" class="tab-pane fade" id="5"></div>
-      <div role="tabpanel" class="tab-pane fade" id="6"></div>
-      <div role="tabpanel" class="tab-pane fade" id="7"></div>
-      <div role="tabpanel" class="tab-pane fade" id="8"></div>
-      <div role="tabpanel" class="tab-pane fade" id="9"></div>
+    <div class="tab-content m-3" id="myTabContent">
+      <div class="tab-pane fade show active" id="basic" role="tabpanel" aria-labelledby="basic-tab">
+        <table>
+          <!-- tr*3>td*11>i.btn.btn-light.btn-sm[data-append="" title=""] -->
+          <i class="btn btn-light btn-sm" data-append="^2" title="^{2}">\(\Box^2\)</i>
+        </table>
+      </div>
+      <div class="tab-pane fade" id="greek-small" role="tabpanel" aria-labelledby="greek-small-tab">
+        tr*3>td*11>i.btn.btn-light.btn-sm[data-append="" title=""]
+      </div>
+      <div class="tab-pane fade" id="greek-large" role="tabpanel" aria-labelledby="greek-large-tab">
+        tr*3>td*11>i.btn.btn-light.btn-sm[data-append="" title=""]
+      </div>
+      <div class="tab-pane fade" id="trigonometry" role="tabpanel" aria-labelledby="trigonometry-tab">
+        tr*3>td*11>i.btn.btn-light.btn-sm[data-append="" title=""]
+      </div>
+      <div class="tab-pane fade" id="operators" role="tabpanel" aria-labelledby="operators-tab">
+        tr*3>td*11>i.btn.btn-light.btn-sm[data-append="" title=""]
+      </div>
+      <div class="tab-pane fade" id="accents" role="tabpanel" aria-labelledby="accents-tab">
+        tr*3>td*11>i.btn.btn-light.btn-sm[data-append="" title=""]
+      </div>
+      <div class="tab-pane fade" id="big-operators" role="tabpanel" aria-labelledby="big-operators-tab">
+        tr*3>td*11>i.btn.btn-light.btn-sm[data-append="" title=""]
+      </div>
+      <div class="tab-pane fade" id="matrices-vectors" role="tabpanel" aria-labelledby="matrices-vectors-tab">
+        tr*3>td*11>i.btn.btn-light.btn-sm[data-append="" title=""]
+      </div>
+      <div class="tab-pane fade" id="calculator" role="tabpanel" aria-labelledby="calculator-tab">...</div>
     </div>
 
-  <p>
-    Type math here:
-    <span id="math-field" style="width: 100px" onkeypress="keypress(event)"></span>
-    <button class="btn btn-primary btn-sm" onclick="calculate()">
-      Calculate
-    </button>
-  </p>
-  <!-- <p>LaTeX of what you typed: <span id="latex"></span></p> -->
-  <input type="text" id="tex" hidden />
+    <p>
+      Type math here:
+      <span id="math-field" style="width: 200px" onkeypress="keypress(event)"></span>
+      <button class="btn btn-primary" onclick="calculate()">
+        Calculate
+      </button>
+    </p>
+    <!-- <p>LaTeX of what you typed: <span id="latex"></span></p> -->
+    <input type="text" id="tex" hidden />
 
-  <!-- <input type="text" id="input" onKeyPress="keypress(event)" /><button
+    <!-- <input type="text" id="input" onKeyPress="keypress(event)" /><button
       id="generate"
       onclick="generate()"
     >
       Generate
     </button> -->
-  <div id="output"></div>
-  <div id="answer"></div>
+    <div id="output"></div>
+    <div id="answer"></div>
 
   </div>
+  <span id="fill-in-the-blank">\sqrt{ \MathQuillMathField{x}^2 + \MathQuillMathField{y}^2 }</span>
+  <script>
+    var fillInTheBlank = MQ.StaticMath(document.getElementById('fill-in-the-blank'));
+    fillInTheBlank.innerFields[0].latex() // => 'x'
+    fillInTheBlank.innerFields[1].latex() // => 'y'
+  </script>
 
   <script>
     var MQ = MathQuill.getInterface(2); // for backcompat
     var mathFieldAnimated = MQ.MathField($("#math-input")[0], {
       spaceBehavesLikeTab: true,
     });
+
+    $('i').click(function()
+    {
+      var append = $(this).attr('data-append')
+      $("#math-field").add(append);
+    })
 
     //   var output = document.getElementById("output");
     var input = document.getElementById("math-input");
